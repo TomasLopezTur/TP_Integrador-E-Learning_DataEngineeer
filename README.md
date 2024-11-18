@@ -4,6 +4,8 @@
 
 Este proyecto tiene como objetivo desarrollar un sistema para extruir datos desde una API (en este caso, la API de CoinCap) y almacenarlos en un formato de archivo Delta Lake
 
+<hr>
+
 ### Funcionalidades
 
 * Extracción de datos desde la API de CoinCap utilizando la biblioteca requests
