@@ -1,0 +1,9 @@
+#Code next to line 24
+# Cargar la tabla Delta como un DataFrame de Pandas
+df = DeltaTable(f"{bronze_dir}/markets").to_pandas()
+
+# Filtrar las filas donde el id es "bitcoin"
+df_trade = df[~pd.isnull(df['tradesCount24Hr'])]
+
+# Mostrar las primeras 10 filas del DataFrame filtrado
+df_trade.head(10)
