@@ -2,7 +2,7 @@
 
 ### Proyecto de Extracción y Almacenamiento de Datos 
 
-Este proyecto tiene como objetivo desarrollar un sistema para extruir datos desde una API (en este caso, la API de CoinCap) y almacenarlos en un formato de archivo Delta Lake
+Este proyecto tiene como objetivo desarrollar un sistema para extruir datos desde una API (en este caso, la API de CoinCap) y almacenarlos en un formato de archivo Delta Lake en version bronze y despues modificar los datos y prepararlos para guradarlos en otro Delta Lake version silver
 
 <hr>
 
@@ -12,6 +12,12 @@ Este proyecto tiene como objetivo desarrollar un sistema para extruir datos desd
 * Conversión de los datos a DataFrames de Pandas
 * Almacenamiento de los datos en archivos Delta Lake utilizando la biblioteca deltalake
 * Implementación de un sistema para evitar duplicados al almacenar nuevos datos
+* Convertir columnas a tipos orrectos
+* Modificar valores nulos a 0
+* Crear columnas que indique qe los precios superan cierto limite y otra que indique el volumen del mercado es significativo
+* Hacer un merge (JOIN) entre assets y markets basado en el símbolo base (base_asset)
+* Calcular el volumen total en dólares y el promedio de transacciones por mercado
+
 
 <hr>
 
@@ -32,4 +38,4 @@ Este proyecto tiene como objetivo desarrollar un sistema para extruir datos desd
 
    <hr>
 Notas
-Este proyecto se diseñó para ser utilizado como una practica de cómo implementar la extracción y almacenamiento de datos utilizando la API.
+Este proyecto se diseñó para ser utilizado como una practica de cómo implementar la extracción, almacenamiento  y manipulacion de datos utilizando la API.
